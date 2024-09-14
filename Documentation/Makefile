@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: LGPL-2.1
 
-include $(src)/scripts/utils.mk
+include ../scripts/utils.mk
 
 
 # This Makefile and manpage XSL files were taken from libtraceevent

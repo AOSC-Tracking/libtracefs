@@ -187,7 +187,7 @@ override CFLAGS += -D_FILE_OFFSET_BITS=64
 export CFLAGS
 export INCLUDES
 
-all: all_cmd
+all: all_cmd doc
 
 LIB_TARGET  = libtracefs.a libtracefs.so.$(TRACEFS_VERSION)
 LIB_INSTALL = libtracefs.a libtracefs.so*
@@ -300,7 +300,7 @@ install_libs: libs install_pkgconfig
 	$(Q)$(call do_install,$(src)/include/tracefs.h,$(includedir_SQ),644)
 	$(Q)$(call install_ld_config)
 
-install: install_libs
+install: install_libs install_doc
 
 install_pkgconfig: $(PKG_CONFIG_FILE)
 	$(Q)$(call , $(PKG_CONFIG_FILE)) \
